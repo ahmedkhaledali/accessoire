@@ -27,7 +27,36 @@
       <div class="icon">
       <img src="https://img.icons8.com/material-sharp/24/000000/user-male-circle.png"/>
       <img src="https://img.icons8.com/android/24/000000/hearts.png"/>
-      <img src="https://img.icons8.com/ios-glyphs/24/000000/add-shopping-cart.png"/>
+   
+
+<!--modal-->
+<!-- Button trigger modal -->
+<a href="#"><img src="https://img.icons8.com/ios-glyphs/24/000000/add-shopping-cart.png" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  
+</a>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="tab">
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---->
+
       <img src="https://img.icons8.com/metro/24/000000/night-portrait.png" type="submit"  onclick="mood()"/>
         
     </div>
@@ -75,9 +104,9 @@
     <img src="img1.jpg" class="card-img-top" alt="..."class="w-20 h-20">
     <div class="card-body">
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="" class="btn btn-outline-dark d-flex justify-content-center"><img id="art-1" datalib="article1" dataprix="450" dataqte ="5"onclick="ajoutPanier(this)"
-        src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
     </div>
+    <button id="art-1" datalib="article1" dataprix="400" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+    <input type="text" id="entier1" name="fname" value="40"><br>
   </div>
 </div>
 
@@ -87,8 +116,8 @@
     <div class="card-body">
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-    <a href="" class="btn btn-outline-dark d-flex justify-content-center"><img
-      src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
+    <button id="art-2" datalib="article2" dataprix="450" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+    <input type="text" id="entier2" name="fname" value="40"><br>
   </div>
 </div>
 
@@ -98,14 +127,12 @@
     <img src="img111.jpg" class="card-img-top" alt="..." class="w-20 h-20">
     <div class="card-body">
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    
-    </div><a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-      src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
   </div>
+  <button id="art-3" datalib="article3" dataprix="400" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+  <input type="text" id="entier3" name="fname" value="40"><br>
 </div>
-
 </div>
-  </div>
+  
 <!---->
 
 <div class="container-fluid p-3">
@@ -118,9 +145,9 @@
       <img src="img22.jpg" class="card-img-top" alt="..." class="w-20 h-20">
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-          src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
       </div>
+      <button id="art-4" datalib="article4" dataprix="500" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+        <input type="text" id="entier4" name="fname" value="40"><br>
     </div>
   </div>
   
@@ -129,9 +156,9 @@
       <img src="img2.jpg" class="card-img-top" alt="..." class="w-20 h-20">
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-          src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
       </div>
+      <button id="art-5" datalib="article5" dataprix="120" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+        <input type="text" id="entier5" name="fname" value="40"><br>
     </div>
   </div>
   
@@ -141,14 +168,12 @@
       <img src="img222.jpg" class="card-img-top" alt="..."class="w-20 h-20">
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-          src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
       </div>
+      <button id="art-6" datalib="article6" dataprix="410" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+        <input type="text" id="entier6" name="fname" value="40"><br>
     </div>
   </div>
   
-  </div>
-    </div>
     <!---->
 
     <div class="container-fluid p-3">
@@ -160,8 +185,8 @@
           <img src="img3.jpg" class="card-img-top" alt="..." class="w-20 h-20" >
           <div class="card-body">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-              src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
+            <button id="art-7" datalib="article7" dataprix="140" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+            <input type="text" id="entier7" name="fname" value="40"><br>
           </div>
         </div>
       </div>
@@ -171,31 +196,28 @@
           <img src="img33.jpg" class="card-img-top" alt="..." class="w-20 h-20" >
           <div class="card-body">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-              src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
           </div>
+          <button id="art-8" datalib="article8" dataprix="340" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+          <input type="text" id="entier8" name="fname" value="40"><br>
         </div>
       </div>
       
       
+    
       <div class="col-md-3">
         <div class="card shadow p-3 mb-5 bg-white rounded">
           <img src="img333.jpg" class="card-img-top" alt="..." class="w-20 h-20" >
           <div class="card-body">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="panier.html" class="btn btn-outline-dark d-flex justify-content-center"><img
-              src="https://img.icons8.com/carbon-copy/30/000000/add-shopping-cart.png" /></a>
           </div>
+          <button id="art-9" datalib="article9" dataprix="340" dataqte ="7"onclick="ajoutPanier(this)">Click me</button>
+          <input type="text" id="entier9" name="fname" value="40"><br>
         </div>
       </div>
-      
       </div>
-        </div>
-       
-        <div id="tab">
+      </div>
       
-        </div>
-        
+
   </fieldset>
 <section>
 <footer>

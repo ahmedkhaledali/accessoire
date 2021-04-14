@@ -15,12 +15,17 @@ let a=myObj.nom
 let b=myObj.prix
 let c=myObj.qte 
 
-    var node1 = document.createElement("p");
+let obj=JSON.stringify(myObj)
+
+var node1 = document.createElement("p");
     var node2 = document.createElement("p");
     var node3 = document.createElement("p");
+    
+    
     var textnode = document.createTextNode(a);
     var textnode1 = document.createTextNode(b);
     var textnode2 = document.createTextNode(c);
+    
     node1.appendChild(textnode);
     document.getElementById("tab").appendChild(node1);
     
@@ -29,6 +34,16 @@ let c=myObj.qte
 
     node3.appendChild(textnode2);
     document.getElementById("tab").appendChild(node3);
+
+    
+  
+
+    localStorage.setItem("test",obj)
+    localStorage.getItem("test")
+
+    
+
+    const local=JSON.parse(localStorage.getItem("test"))
   
 panier.push( myObj )
 console.log(panier)
