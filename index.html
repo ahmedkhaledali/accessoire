@@ -36,43 +36,33 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+            <div class="row mt-3 ">
+              <div class="col-md-3">
+                <strong>Aritcles</strong>
+              </div>
+              <div class="col-md-2">
+                <strong>Nom </strong>
+              </div>
+              <div class="col-md-3">
+                <strong>Categories</strong>
+              </div>
+              <div class="col-md-2">
+                <strong>Prix</strong>
+              </div>
             
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Aritcles</th>
-                <th scope="col">Image</th>
-                <th scope="col">Catégorie</th>
-                <th scope="col">Prix</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                
-                <td id="nom"></td>
-                <td id="image"></td>
-                <td id="Categories"></td>
-                <td id="prix"></td>
-              </tr>
-              
-            </tbody>
-          </table>
-    
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            <div class="item-card">
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!---->        
+        </div>
         </div>
         <ion-icon  class="night" name="invert-mode-outline" type="submit"  onclick="mood()"></ion-icon>
-        </div>
       </nav>
     
       <div class="container-fluid">
@@ -99,11 +89,6 @@
 </div>
       </div>
     <!---->
-
-  
-
-
-
     <div class="d-flex justify-content-end p-4">
       <select class="form-select w-25 " aria-label="Default select example">
         <option selected>prix</option>
@@ -112,9 +97,34 @@
         <option value="3">100</option>
       </select>
     </div>
-  
+
   <div class="container-fluid p-3">
-<div class="row p-4">
+    <div class="row p-4">
+    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+      <h2>Filtre par Categories</h2>
+      <form id="filtreForm">
+      <div class="form-check">
+        <input   class="form-check-input" type="radio" name="flexFiltre" value="Colies" id="flexRadioDefault1" datacategorie ="Colies" >
+        <label class="form-check-label" for="flexRadioDefault1">
+          Colies
+        </label>
+      </div>
+      <div class="form-check">
+        <input   class="form-check-input" type="radio" name="flexFiltre" value="Bracelets" id="flexRadioDefault2" datacategorie ="Bracelets" >
+        <label class="form-check-label" for="flexRadioDefault2">
+          Bracelets
+        </label>
+      </div>
+      <div class="form-check">
+        <input   class="form-check-input" type="radio" name="flexFiltre" value="Charpes" id="flexRadioDefault3" datacategorie ="Charpes" >
+        <label class="form-check-label" for="flexRadioDefault3">
+          Charpes
+        </label>
+      </div>
+    </form>
+      <button onclick="recherche()">recherche</button>
+    </div>
+
 <div class="col-md-3">
   <div class="wsk-cp-product">
     <div class="wsk-cp-img">
@@ -131,8 +141,8 @@
         <p> player good work now check this link</p>
       </div>
       <div class="card-footer">
-        <div class="wcf-left"><span class="price">100 DT</span></div>
-        <button  class="touche" id="art-1" datalib="Africain-colie" dataprix="400" datacategorie ="Colies" dataimg="http://127.0.0.1:5500/img1.jpg"onclick="ajoutPanier(this)">Click me</button>
+        <div class="wcf-left"><span class="price">400 DT</span></div>
+        <button type="button" class="btn btn-outline-secondary ms-2 touche"  id="art-1" datalib="Africain-colie" dataprix="400" datacategorie ="Colies" dataimg="http://127.0.0.1:5501/img1.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
       </div>
     </div>
   </div>
@@ -154,18 +164,16 @@
         <p> player good work now check this link</p>
       </div>
       <div class="card-footer">
-        <div class="wcf-left"><span class="price">100 DT</span></div>
-        <button class="touche" id="art-2" datalib="Africain-colie" dataprix="450" datacategorie ="Colies" dataimg="http://127.0.0.1:5500/img11.jpg"onclick="ajoutPanier(this)">Click me</button>
+        <div class="wcf-left"><span class="price">450 DT</span></div>
+        <button type="button" class="btn btn-outline-secondary ms-2 touche"  id="art-2" datalib="Africain-colie" dataprix="450" datacategorie ="Colies" dataimg="http://127.0.0.1:5501/img11.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
       </div>
     </div>
   </div>
 </div>
 <div class="col-md-3">
-
-
   <div class="wsk-cp-product">
     <div class="wsk-cp-img">
-      <img src="img111.jpg" style="height:100%;width: 100%;" alt="Product" class="img-responsive"  />
+      <img src="img111.jpg"  alt="Product" class="img-responsive"  />
     </div>
     <div class="wsk-cp-text">
       <div class="category">
@@ -178,97 +186,169 @@
         <p> player good work now check this link</p>
       </div>
       <div class="card-footer">
-        <div class="wcf-left"><span class="price">100 DT</span></div>
-        <button class="touche" id="art-3" datalib="Africain-colie" dataprix="150" datacategorie ="Colies" dataimg="http://127.0.0.1:5500/img111.jpg"onclick="ajoutPanier(this)">Click me</button>
+        <div class="wcf-left"><span class="price">150 DT</span></div>
+        <button type="button" class="btn btn-outline-secondary ms-2 touche"  id="art-3" datalib="Africain-colie" dataprix="150" datacategorie ="Colies" dataimg="http://127.0.0.1:5501/img111.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
       </div>
     </div>
   </div>
-  
+</div>
 </div>
 </div>
 <!---->
 
 <div class="container-fluid p-3">
   <div class="row p-4">
-    <div class="col-md-3">
-   
+    <div class="col-md-3">  
   </div>
+
   <div class="col-md-3">
-    <div class="card shadow p-3 mb-5 bg-white rounded">
-      <img src="img22.jpg" class="card-img-top" alt="..." class="w-20 h-20">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="wsk-cp-product">
+      <div class="wsk-cp-img">
+        <img src="img2.jpg" alt="Product" class="img-responsive" />
       </div>
-      <button class="touche" id="art-4" datalib="Africain-Bracletes" dataprix="100" datacategorie ="Bracelets" dataimg="http://127.0.0.1:5500/img22.jpg"onclick="ajoutPanier(this)">Click me</button>
-   
+      <div class="wsk-cp-text">
+        <div class="category">
+          <span>Article</span>
+        </div>
+        <div class="title-product">
+          <h3>afro</h3>
+        </div>
+        <div class="description-prod">
+          <p> player good work now check this link</p>
+        </div>
+        <div class="card-footer">
+          <div class="wcf-left"><span class="price">100 DT</span></div>
+          <button type="button" class="btn btn-outline-secondary ms-2 touche" id="art-4" datalib="Africain-Bracletes" dataprix="100" datacategorie ="Bracelets" dataimg="http://127.0.0.1:5501/img22.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
+        </div>
+      </div>
     </div>
-  </div>
+    </div>
   
   <div class="col-md-3">
-    <div class="card shadow p-3 mb-5 bg-white rounded">
-      <img src="img2.jpg" class="card-img-top" alt="..." class="w-20 h-20">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="wsk-cp-product">
+      <div class="wsk-cp-img">
+        <img src="img22.jpg" alt="Product" class="img-responsive" />
       </div>
-      <button  class="touche" id="art-5" datalib="Africain-Bracelets" dataprix="200" datacategorie ="Bracelets" dataimg="http://127.0.0.1:5500/img2.jpg"onclick="ajoutPanier(this)">Click me</button>
+      <div class="wsk-cp-text">
+        <div class="category">
+          <span>Article</span>
+        </div>
+        <div class="title-product">
+          <h3>afro</h3>
+        </div>
+        <div class="description-prod">
+          <p> player good work now check this link</p>
+        </div>
+        <div class="card-footer">
+          <div class="wcf-left"><span class="price">200 DT</span></div>
+          <button type="button" class="btn btn-outline-secondary ms-2 touche" id="art-5" datalib="Africain-Bracelets" dataprix="200" datacategorie ="Bracelets" dataimg="http://127.0.0.1:5501/img2.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
       
+        </div>
+      </div>
+    </div>      
     </div>
-  </div>
-  
   
   <div class="col-md-3">
-    <div class="card shadow p-3 mb-5 bg-white rounded">
-      <img src="img222.jpg" class="card-img-top" alt="..."class="w-20 h-20">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="wsk-cp-product">
+      <div class="wsk-cp-img">
+        <img src="img222.jpg" alt="Product" class="img-responsive" />
       </div>
-      <button class="touche" id="art-6" datalib="Africain-Bracelets" dataprix="250" datacategorie ="Bracelets" dataimg="http://127.0.0.1:5500/img222.jpg"onclick="ajoutPanier(this)">Click me</button>
-        
+      <div class="wsk-cp-text">
+        <div class="category">
+          <span>Article</span>
+        </div>
+        <div class="title-product">
+          <h3>afro</h3>
+        </div>
+        <div class="description-prod">
+          <p> player good work now check this link</p>
+        </div>
+        <div class="card-footer">
+          <div class="wcf-left"><span class="price">250 DT</span></div>
+          <button type="button" class="btn btn-outline-secondary ms-2 touche" id="art-6" datalib="Africain-Bracelets" dataprix="250" datacategorie ="Bracelets" dataimg="http://127.0.0.1:5501/img222.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>       
     </div>
   </div>
   
     <!---->
-
     <div class="container-fluid p-3">
       <div class="row p-4">
         <div class="col-md-3">
       </div>
-      <div class="col-md-3">
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-          <img src="img3.jpg" class="card-img-top" alt="..." class="w-20 h-20" >
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <button  class="touche" id="art-7" datalib="Africain-Charpes" dataprix="250" datacategorie ="Charpes" dataimg="http://127.0.0.1:5500/img3.jpg"onclick="ajoutPanier(this)">Click me</button>
-            
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-3">
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-          <img src="img33.jpg" class="card-img-top" alt="..." class="w-20 h-20" >
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <button class="touche" id="art-8" datalib="Africain-Charpes" dataprix="220" datacategorie ="Charpes" dataimg="http://127.0.0.1:5500/img33.jpg"onclick="ajoutPanier(this)">Click me</button>
 
-        </div>
-      </div>
-      
-      
-    
       <div class="col-md-3">
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-          <img src="img333.jpg" class="card-img-top" alt="..." class="w-20 h-20" >
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="wsk-cp-product">
+          <div class="wsk-cp-img">
+            <img src="img3.jpg" alt="Product" class="img-responsive" />
           </div>
-          <button class="touche" id="art-9" datalib="Africain-Charpes" dataprix="300" datacategorie ="Charpes" dataimg="http://127.0.0.1:5500/img333.jpg"onclick="ajoutPanier(this)">Click me</button>
+          <div class="wsk-cp-text">
+            <div class="category">
+              <span>Article</span>
+            </div>
+            <div class="title-product">
+              <h3>afro</h3>
+            </div>
+            <div class="description-prod">
+              <p> player good work now check this link</p>
+            </div>
+            <div class="card-footer">
+              <div class="wcf-left"><span class="price">250 DT</span></div>
+              <button type="button" class="btn btn-outline-secondary ms-2 touche"  id="art-7" datalib="Africain-Charpes" dataprix="250" datacategorie ="Charpes" dataimg="http://127.0.0.1:5501/img3.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
+            </div>
+          </div>
+        </div>  
+          </div>
         
+      <div class="col-md-3">
+        <div class="wsk-cp-product">
+          <div class="wsk-cp-img">
+            <img src="img33.jpg" alt="Product" class="img-responsive" />
+          </div>
+          <div class="wsk-cp-text">
+            <div class="category">
+              <span>Article</span>
+            </div>
+            <div class="title-product">
+              <h3>afro</h3>
+            </div>
+            <div class="description-prod">
+              <p> player good work now check this link</p>
+            </div>
+            <div class="card-footer">
+              <div class="wcf-left"><span class="price">220 DT</span></div>
+              <button type="button" class="btn btn-outline-secondary ms-2 touche" id="art-8" datalib="Africain-Charpes" dataprix="220" datacategorie ="Charpes" dataimg="http://127.0.0.1:5501/img33.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
+            </div>
+          </div>
+        </div>  
+      </div>
+      
+      <div class="col-md-3">
+        <div class="wsk-cp-product">
+          <div class="wsk-cp-img">
+            <img src="img333.jpg" alt="Product" class="img-responsive" />
+          </div>
+          <div class="wsk-cp-text">
+            <div class="category">
+              <span>Article</span>
+            </div>
+            <div class="title-product">
+              <h3>afro</h3>
+            </div>
+            <div class="description-prod">
+              <p> player good work now check this link</p>
+            </div>
+            <div class="card-footer">
+              <div class="wcf-left"><span class="price">300 DT</span></div>
+              <button type="button" class="btn btn-outline-secondary ms-2 touche"  id="art-9" datalib="Africain-Charpes" dataprix="300" datacategorie ="Charpes" dataimg="http://127.0.0.1:5501/img333.jpg"onclick="ajoutPanier(this)">Ajouter au panier</button>
+            </div>
+          </div>
+        </div> 
         </div>
       </div>
       </div>
-      </div>
+      
       
 
 <section>

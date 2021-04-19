@@ -13,7 +13,7 @@ function ajoutPanier(x){
 };
 panier.push( myObj )
 console.log(panier)
-
+let item = document.querySelector('.item-card')
 let a=myObj.nom
 let b=myObj.prix
 let c=myObj.cat 
@@ -23,31 +23,23 @@ let obj=JSON.stringify(panier)
 console.log(obj)
 
 
-    var node1 = document.createElement("p");
-    var node2 = document.createElement("p");
-    var node3 = document.createElement("p");
-    var node4 = document.createElement("img");
-    node4.src=d
-    node4.style.height="50px"
-  
-    
-    var textnode1 = document.createTextNode(a);
-    var textnode2 = document.createTextNode(b);
-    var textnode3 = document.createTextNode(c);
-    var textnode4 = document.createTextNode(d);
-    
-    node1.appendChild(textnode1);
-    document.getElementById("nom").appendChild(node1);
-    
-    node2.appendChild(textnode2);
-    document.getElementById("prix").appendChild(node2);
 
-    node3.appendChild(textnode3);
-    document.getElementById("Categories").appendChild(node3);
 
-    node4.appendChild(textnode4);
-    document.getElementById("image").appendChild(node4);
-  
+item.innerHTML+=`
+     <div class="row mt-3 ">
+     <div class="col-md-3">
+       <img src="${d}" class="img"style="height:50px;width:50px" >
+     </div>
+     <div class="col-md-2">
+       <strong>${a}</strong>
+     </div>
+     <div class="col-md-3">
+       <strong>${c}</strong>
+     </div>
+     <div class="col-md-2 d-flex" >
+     <strong>${b}</strong>
+     </div>
+   </div>`
 
     localStorage.setItem("test",obj)
     localStorage.getItem("test")
