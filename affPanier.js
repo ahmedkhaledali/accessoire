@@ -65,7 +65,14 @@ node4.src="http://127.0.0.1:5501/panier.html"
   
 function supp(){
     
-    console.log()
+  let clearCart = document.querySelector(".supp")
+  clearCart.addEventListener("click", () => {
+  localStorage.removeItem("productsInCart")
+  localStorage.removeItem("cardNumbers")
+  localStorage.removeItem("totalPrice")
+  productSection.innerHTML = ''
+  document.querySelector('#badge-cart').innerHTML = 0
+  })
 }
 
 

@@ -22,7 +22,7 @@ let d=myObj.img
 let obj=JSON.stringify(panier)
 console.log(obj)
 
-
+ 
 
 
 item.innerHTML+=`
@@ -65,6 +65,17 @@ function kl(){
         document.getElementById('val').innerHTML=1
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
